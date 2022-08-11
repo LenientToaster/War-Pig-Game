@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fat Pig Game</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <div class="header"><h1 id="header">War Pig</h1></div>
+    <div class="diceHolder">
+      <div class="dice" id="die1"></div>
+      <div class="dice" id="die2"></div>
+    </div>
+    <div class="doublesAnnouncement" id="doubles"></div>
+    <div class="player1Totals">
+      <p class="playerTotal" id="player1RunningTotal">
+        Player 1 Running Total =
+      </p>
+      <br />
+      <p class="playerTotal" id="player1GrandTotal">Player 1 Grand Total =</p>
+    </div>
+    <br />
+
+    <div class="container">
+      <form><select> Number of Players
+        <option value="">Number of Players</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select></form>
+      <button class="button rollBtn" id="rollButton">Roll</button>
+      <button class="button bankBtn" id="bankButton">Bank</button>
+    </div>
+
+    <link rel="stylesheet" href="./src/styles.css" />
+    <script src="src/index.js"></script>
+  </body>
+</html>

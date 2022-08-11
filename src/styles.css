@@ -1,0 +1,155 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20pt;
+  background-color: #DEFDF7;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60pt;
+  margin-top: 5px;
+}
+
+/* Styling the size of the dice */
+.dice {
+  font-size: 150px;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  text-align: center;
+}
+
+.diceHolder {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: -10px;
+}
+
+.doublesAnnouncement {
+  text-align: center;
+  font-size: 40pt;
+  margin-bottom: 50px;
+}
+
+.player1Totals {
+  margin-left: 15%;
+  width: 70%;
+}
+
+/* // Styling button */
+.button {
+  font-family: "Courier New", Courier, monospace;
+  opacity: 80%;
+  text-align: center;
+  padding: 15px 25px;
+  font-size: 36px;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04aa6d;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Adding the ripple effect animation */
+.button:hover {
+  background-color: #3e8e41;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button:after {
+  content: "";
+  background: #90ee90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+/* ensuring we have a container to stop the ripple escaping */
+.container {
+  text-align: center;
+}
+
+/* Adding in styling before the colour fill animation */
+.button {
+  background: none;
+  border: 1px solid green;
+  font-size: 23px;
+  padding: 10px 20px;
+  font-family: "Courier New", Courier, monospace;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+}
+/*  Colour fill animation  */
+.rollBtn,
+.bankBtn {
+  color: green;
+}
+
+.rollBtn:hover,
+.bankBtn:hover {
+  color: #fff;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: green;
+  z-index: -1;
+  transition: 0.8s;
+}
+
+.rollBtn::before {
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+
+.bankBtn::before {
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.rollBtn:hover::before,
+.bankBtn:hover::before {
+  height: 180%;
+}
+
+/* End of button animations */
